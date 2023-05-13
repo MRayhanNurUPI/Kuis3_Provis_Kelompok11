@@ -1,3 +1,6 @@
+// 1) Belum Bisa Membuat Value Dropdown Berubah
+// 2) Belum Bisa Menampilkan ListView untuk Jenis Peminjaman
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -130,10 +133,10 @@ class SecondPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            "id : ${detil.id}",
+                            "ID : ${detil.id}",
                           ),
-                          Text("nama : ${detil.nama}"),
-                          Text("bunga : ${detil.bunga}%"),
+                          Text("Nama : ${detil.nama}"),
+                          Text("Bunga : ${detil.bunga}%"),
                           Text("Syariah : ${detil.is_syariah}"),
                         ],
                       ),
@@ -193,12 +196,7 @@ class HomePage extends StatelessWidget {
                       DropdownButton(
                           value: selectedPinjaman,
                           items: jenis_pinjaman,
-                          onChanged: (String? item) {
-                            selectedPinjaman = item.toString();
-                            context
-                                .read<JenisPinjamanCubit>()
-                                .fetchData(selectedPinjaman);
-                          }),
+                          onChanged: (String? item) {}),
                       SizedBox(height: 16),
                       GestureDetector(
                         onTap: () {
