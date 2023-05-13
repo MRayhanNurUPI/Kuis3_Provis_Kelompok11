@@ -4,30 +4,6 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:developer' as developer;
 
-class CounterCubit extends Cubit<int> {
-  CounterCubit() : super(0);
-
-  void increment() => emit(state + 1);
-
-  void decrement() => emit(state - 1);
-}
-
-class UMKM_Model {
-  String id;
-  String nama;
-  String jenis;
-  UMKM_Model({required this.id, required this.nama, required this.jenis});
-}
-
-class dropdownValue {
-  String id;
-
-  dropdownValue({required this.id});
-  void setSelectedID(id) {
-    this.id = id;
-  }
-}
-
 class JenisPinjamanModel {
   String id;
   String nama;
